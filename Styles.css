@@ -1,9 +1,8 @@
- @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body{
-    font-family: 'Press Start 2P', cursive;,sans-serif; 
-    background-color:#31087B;
-}
+    font-family: 'Press Start 2P', cursive;
+    background-color:#31087B;}
 
 
     #seleccionar-mascota
