@@ -2,47 +2,57 @@
 
 body{
     font-family: 'Press Start 2P', cursive;
-    background-color:#31087B;}
-
-
-    #seleccionar-mascota
-{display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center}
-.titulo
-{
-color:#FA2FB5;font-size:32px;
+    background-color:orange;
 }
 
 
-.subtitulo
-{color:#F10086;font-size:20px
+#seleccionar-mascota{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
-.tarjetas{display:flex;gap:10px}
+.titulo{
+    color:darkred;
+    font-size: 32px;
+}
 
 
-.tarjeta-de-mokepon
-{width:230px;
+.subtitulo{
+    color:#F10086;font-size:20px
+}
+
+.tarjetas, .tarjetas-ataques{
+    display:flex;
+    gap:10px
+}
+
+
+.tarjeta-de-mokepon{
+    width:230px;
     height:100px;
-    background:aquamarine;
+    background:darkblue;
     padding:10px;
     box-sizing:border-box;
     border-radius:20px;
-    display:
-    flex;justify-content:center;
+    display: flex;
+    justify-content:center;
     align-items:center;
     color:red;
     border-color: antiquewhite;}
-    .tarjeta-de-mokepon img{width:80px}
-    #boton-mascota
-    {width:180px;
+
+
+  .tarjeta-de-mokepon img{
+    width:80px
+}
+    #boton-mascota{
+        width:180px;
         height:40px;
         border-radius:20px;
         background:0 0;
         border:3px solid #C92C6D;
         color:orangered;
-        font-family:poppins,sans-serif;
+        font-family: 'Press Start 2P', cursive;
         margin-top:30px}
 
 
@@ -51,16 +61,75 @@ color:#FA2FB5;font-size:32px;
     display:none
 }
 
+input:checked + label{
+    background-color: #F10086;
+}
+
 
 #seleccionar-ataque {
-    display: flex;   
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    }
+
+    .boton-de-ataque{
+        background-color:darkblue;
+        padding: 10px;
+        box-sizing:border-box;
+        border-radius:20px;
+        border-color: transparent;
+        width:150px;
+        color: turquoise;
+        font-family: 'Press Start 2P', cursive;
+
+    }
+   
+
+    #mensajes{
+    width: 450px;
+    background: aquamarine;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    display:flex;
+    align-items: center;   
+    flex-direction: column; 
+    }
+
+    
+
+
+    #boton-reiniciar{
+        border:none;
+        color: blue;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+   .ataques{
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+
+#vidas-jugador, #vidas-enemigo{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
+@media (max-width: 360px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
+   
+}
+
+
+
     
-
-
-
-

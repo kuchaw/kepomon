@@ -19,7 +19,7 @@ botonReiniciar.addEventListener('click',reiniciarJuego)}
 function seleccionarMascotaJugador(){let sectionSeleccionarMascota=document.getElementById('seleccionar-mascota')
 sectionSeleccionarMascota.style.display='none'
 let sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
-sectionSeleccionarAtaque.style.display='block'
+sectionSeleccionarAtaque.style.display='flex'
 let inputHipodoge=document.getElementById('hipodoge')
 let inputCapipepo=document.getElementById('capipepo')
 let inputRatigueya=document.getElementById('ratigueya')
@@ -51,14 +51,27 @@ vidasJugador--
 spanVidasJugador.innerHTML=vidasJugador}
 revisarVidas()}
 function revisarVidas(){if(vidasEnemigo==0){crearMensajeFinal("FELICITACIONES! Ganaste :)")}else if(vidasJugador==0){crearMensajeFinal('Lo siento, perdiste :(')}}
-function crearMensaje(resultado){let sectionMensajes=document.getElementById('mensajes')
-let parrafo=document.createElement('p')
-parrafo.innerHTML='Tu mascota atacó con '+ataqueJugador+', las mascota del enemigo atacó con '+ataqueEnemigo+'- '+resultado
-sectionMensajes.appendChild(parrafo)}
-function crearMensajeFinal(resultadoFinal){let sectionMensajes=document.getElementById('mensajes')
-let parrafo=document.createElement('p')
-parrafo.innerHTML=resultadoFinal
-sectionMensajes.appendChild(parrafo)
+function crearMensaje(resultado){
+    let sectionMensajes = document.getElementById('resultado')
+    let AtaqueDelJugador = document.getElementById('ataque-del-jugador')
+    let AtaqueDelEnemigo = document.getElementById('ataque-del-enemigo')
+
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
+
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo 
+
+    AtaqueDelJugador.appendChild(nuevoAtaqueDelJugador)
+    AtaqueDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+}
+
+function crearMensajeFinal(resultadoFinal)
+{let sectionMensajes=document.getElementById('resultado')
+
+sectionMensajes.innerHTML=resultadoFinal
+
 let botonFuego=document.getElementById('boton-fuego')
 botonFuego.disabled=true
 let botonAgua=document.getElementById('boton-agua')
