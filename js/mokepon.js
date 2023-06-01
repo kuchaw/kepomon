@@ -1,20 +1,31 @@
+let sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
+let sectionReiniciar=document.getElementById('reiniciar')
+let botonMascotaJugador=document.getElementById('boton-mascota')
+let botonTierra=document.getElementById('boton-tierra')
+let botonReiniciar=document.getElementById('boton-reiniciar')
+
+
+
+
+
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador=3
 let vidasEnemigo=3
-function iniciarJuego(){let sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
-sectionSeleccionarAtaque.style.display='none'
-let sectionReiniciar=document.getElementById('reiniciar')
+function iniciarJuego(){
+    
+sectionSeleccionarAtaque.style.display="none"
+
 sectionReiniciar.style.display='none'
-let botonMascotaJugador=document.getElementById('boton-mascota')
+
 botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)
 let botonFuego=document.getElementById('boton-fuego')
 botonFuego.addEventListener('click',ataqueFuego)
 let botonAgua=document.getElementById('boton-agua')
 botonAgua.addEventListener('click',ataqueAgua)
-let botonTierra=document.getElementById('boton-tierra')
+
 botonTierra.addEventListener('click',ataqueTierra)
-let botonReiniciar=document.getElementById('boton-reiniciar')
+
 botonReiniciar.addEventListener('click',reiniciarJuego)}
 function seleccionarMascotaJugador(){let sectionSeleccionarMascota=document.getElementById('seleccionar-mascota')
 sectionSeleccionarMascota.style.display='none'
